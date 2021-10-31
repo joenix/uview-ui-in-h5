@@ -1,0 +1,37 @@
+{
+  "name": "uview-ui-in-h5",
+  "version": "1.8.4-beta.10",
+  "description": "uview-ui-in-h5, a package can run in h5 without uni-app, for study.",
+  "main": "index.js",
+  "keywords": [
+    "uview",
+    "uView",
+    "uni-app",
+    "uni-app ui",
+    "uniapp",
+    "uviewui",
+    "uview ui",
+    "uviewUI",
+    "uViewui",
+    "uViewUI",
+    "uView UI",
+    "uni ui",
+    "uni UI",
+    "uniapp ui",
+    "ui",
+    "UI框架",
+    "uniapp ui框架",
+    "uniapp UI"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2"
+  },
+  "author": "joenix",
+  "license": "MIT"
+}

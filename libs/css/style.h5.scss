@@ -1,0 +1,143 @@
+/* H5的时候，隐藏滚动条 */
+.uni {
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none;
+    background: transparent;
+  }
+}
+
+/**
+ * Extension by Joenix - 2021.06.07
+ * ========== ========== ==========
+ */
+.uni {
+  $preset: "u";
+
+  $input: #{$preset}-input;
+  $checkbox: #{$preset}-checkbox;
+  $radio: #{$preset}-radio;
+  $icon: #{$preset}-icon;
+  $preview: #{$preset}-preview;
+  $delete: #{$preset}-delete;
+  $progress: #{$preset}-progress;
+  $add: #{$preset}-add;
+  $border: #{$preset}-border;
+
+  $space: 36px;
+  $half: $space / 2;
+
+  $radius: 3px;
+
+  $size: 16px;
+  $bold: bold;
+
+  @mixin reset {
+    border: none !important;
+    outline: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: $space !important;
+
+    font-size: $size !important;
+    text-decoration: inherit !important;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  input,
+  textarea {
+    @include reset;
+  }
+
+  input {
+    height: $space !important;
+    min-height: $space !important;
+  }
+
+  textarea {
+    resize: none !important;
+  }
+
+  // Input
+  div[class*="#{$input}"] {
+    padding: 0 10px !important;
+  }
+
+  // Checkbox
+  div[class*="#{$checkbox}"],
+  div[class*="#{$radio}"] {
+    .#{$checkbox}__label,
+    .#{$radio}__label {
+      font-size: $size !important;
+    }
+
+    .#{$checkbox}__icon-wrap,
+    .#{$radio}__icon-wrap {
+      width: $half !important;
+      height: $half !important;
+
+      &--square {
+        border-radius: $radius !important;
+      }
+    }
+  }
+
+  // Icon
+  [class*="#{$icon}"] {
+    font-size: 20px !important;
+    padding: 0 2px !important;
+  }
+
+  // Delete
+  [class*="#{$delete}"] {
+    width: 22px !important;
+    height: 22px !important;
+
+    .uicon-close {
+      font-size: 10px !important;
+    }
+  }
+
+  // Preview
+  div[class*="#{$preview}"],
+  div[class*="#{$add}"] {
+    width: 100px !important;
+    height: 100px !important;
+
+    .#{$add}-tips {
+      width: auto !important;
+      height: auto !important;
+      margin-top: 0 !important;
+      font-size: $size !important;
+    }
+  }
+
+  // Progress
+  div[class*="#{$progress}"] {
+    height: 8px !important;
+  }
+
+  // Border
+  div[class*="#{$border}"] {
+    &::after {
+      border-bottom-width: 0 !important;
+    }
+  }
+
+  // first `div > span` in form-item
+  .form {
+    &--item {
+      & > div > span {
+        font-size: $size !important;
+        font-weight: $bold !important;
+      }
+    }
+  }
+}
